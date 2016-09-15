@@ -47,4 +47,17 @@ img {
 .featherlight .featherlight-content {
   overflow: visible;
   background: none;
+  height: 70%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.featherlight-next:hover,
+.featherlight-previous:hover {
+  background: rgba(255,255,255,0.0);
+}
+.caption{
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
 }
