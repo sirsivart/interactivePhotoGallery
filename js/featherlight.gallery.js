@@ -104,8 +104,8 @@
 		/** Additional settings for Gallery **/
 		previousIcon: '&#8249;',     /* Code that is used as previous icon */
 		nextIcon: '&#8250;',         /* Code that is used as next icon */
+		galleryFadeOut: 900,         /* fadeOut speed before image is loaded */
 		galleryFadeIn: 100,          /* fadeIn speed when image is loaded */
-		galleryFadeOut: 300,         /* fadeOut speed before image is loaded */
 
 		slides: function() {
 			if (this.filter) {

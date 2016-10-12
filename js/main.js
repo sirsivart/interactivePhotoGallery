@@ -13,8 +13,10 @@ $.featherlightGallery.prototype.afterContent = function() {
   $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
 };
 $('a.image').featherlightGallery({
+    galleryFadeIn: 900,
+    galleryFadeOut: ,
     type: 'image',
-    galleryFadeIn: 300,
-
-    openSpeed: 300
+    previousIcon: '<',
+    nextIcon: '>',
+    openSpeed: 900
 });

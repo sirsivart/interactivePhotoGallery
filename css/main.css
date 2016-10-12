@@ -1,6 +1,7 @@
 body {
   width: 100%;
   text-align: center;
+  font-family: 'Cabin', 'Neuton', sans-serif;
 }
 #search {
   display: inline-block;
@@ -23,7 +24,8 @@ body {
   display: inline-block;;
   width: 1040px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  -webkit-padding-start:0;
 }
 a {
   text-decoration: none;
@@ -33,7 +35,7 @@ li {
   text-decoration: none;
   float: left;
 }
-img {
+.thumb {
   margin: 0px 30px 60px 30px ;
 }
 
@@ -43,21 +45,116 @@ img {
     clear:both;
 }
 
-/* Added Light Box Styles*/
-.featherlight .featherlight-content {
+/********** Added Light Box Styles **********/
+ .featherlight .featherlight-content {
   overflow: visible;
   background: none;
   height: 70%;
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
+  padding: 0;
+}
+
+.featherlight-image, .featherlight-inner {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.featherlight {
+  cursor: default;
+}
+/********** Previous and next styles **********/
+.featherlight-next span, .featherlight-previous span{
+  text-shadow: none;
+  font-family: 'Neuton';
+ display: inline-block;
+}
+.featherlight:last-of-type{
+  background: rgba(66, 66, 66, 0.98);
+}
+.featherlight-next span {
+  height: 100px;
+  width: 100px;
+  padding: 0;
+  margin: 0, -40px, 0, 0;
+  position: fixed;
+  top: 50%;
+  left: 80%;
+
+}
+.featherlight-previous span {
+  height: 100px;
+  width: 100px;
+  padding: 0;
+  margin: 0, -40px, 0, 0;
+  position: fixed;
+  top: 50%;
+  right: 80%;
+  left: auto;
+}
+.featherlight-previous, .featherlight-next{
+  width: 0;
+  height: 0;
 }
 .featherlight-next:hover,
 .featherlight-previous:hover {
   background: rgba(255,255,255,0.0);
 }
+
+/********** Image Caption Styles **********/
 .caption{
   color: white;
   width: 75%;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
+  padding-bottom: 100px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  0% {
+      transform: translate3d(0px, 100px, 0px);
+      color: rgba(66, 66, 66, 0.98);
+      animation-timing-function: ease-in;
+  }
+  /*50% {
+      transform: translate3d(50px, 50px, 0px);
+      animation-timing-function: ease-out;*/
+  }
+  100% {
+      transform: translate3d(50px, 40px, 0px);
+  }
+}
+
+/********** Media Queries **********/
+@media (max-width: 1070px) {
+  .gallery {
+   width: 780px;
+  }
+  .float_center {
+   float: right;
+   position: relative;
+   left: -50%; /* or right 50% */
+   text-align: left;
+ }
+ .float_center > .gallery {
+   position: relative;
+   left: 50%;
+ }
+}
+
+@media (max-width: 800px) {
+ .gallery {
+   width: 520px;
+ }
+}
+
+@media (max-width: 540px) {
+ .gallery {
+   width: 260px;
+ }
+ #search{
+  width: 85%;
+ }
 }
